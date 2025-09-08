@@ -1,0 +1,15 @@
+{
+  "plugins": [
+    [
+      "module-resolver",
+      {
+        "alias": {
+          "~": "./src"
+        }
+      }
+    ]
+  ]
+}
+
+// import theo kieu
+// import App from '~/App' babel se tu dong chuyen doi cai ~ thanh
