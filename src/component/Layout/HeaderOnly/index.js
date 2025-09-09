@@ -4,7 +4,7 @@ import style from "./DefaultLayout.module.scss";
 
 const cx = classNames.bind(style);
 
-function DefaultLayout({ children }) {
+function HeaderOnly({ children }) {
   return (
     <div className={cx("wrapper")}>
       <Header />
@@ -15,4 +15,4 @@ function DefaultLayout({ children }) {
   );
 }
 
-export default DefaultLayout;
+export default HeaderOnly;
