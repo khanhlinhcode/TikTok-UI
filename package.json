@@ -5,6 +5,7 @@
   "dependencies": {
     "@testing-library/dom": "^10.4.1",
     "@testing-library/user-event": "^13.5.0",
+    "@tippyjs/react": "^4.2.6",
     "classname": "^0.0.0",
     "classnames": "^2.5.1",
     "normalize.css": "^8.0.1",
