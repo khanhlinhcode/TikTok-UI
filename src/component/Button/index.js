@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import style from "./Button.module.scss";
 
 const cx = classNames.bind(style);
+
 function Button({
   to,
   href,
@@ -10,7 +11,7 @@ function Button({
   rightIcon,
   onClick,
   text = false,
-  smaill = false,
+  small = false,
   large = false,
   outline = false,
   children,
@@ -41,16 +42,18 @@ function Button({
     props.href = href;
     Comp = "a";
   }
+
   const classes = cx("wrapper", {
     [className]: className,
     primary,
     outline,
-    smaill,
+    small,
     large,
     text,
     rounded,
     disabled,
   });
+
   return (
     <Comp className={classes} {...props}>
       {leftIcon && <span className={cx("icon")}>{leftIcon}</span>}

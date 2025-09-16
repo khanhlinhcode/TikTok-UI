@@ -12,6 +12,7 @@
   height: 100%;
   width: var(--default-layout-header-width, 1150px);
   display: flex;
+  padding: 0 var(--default-layout-horizontal-spacer);
   align-items: center;
   justify-content: space-between;
 }
@@ -84,4 +85,37 @@
   &:active {
     background-color: rgba(22, 24, 35, 0.06);
   }
+}
+// action
+.actions {
+  display: flex;
+  align-items: center;
+}
+.more-btn {
+  font-size: 2rem;
+  margin-left: 28px;
+  background: transparent;
+  padding: 6px;
+  cursor: pointer;
+  &:hover {
+    background-color: rgba(22, 24, 35, 0.03);
+    border-radius: 50%;
+  }
+}
+
+.action-btn {
+  font-size: 2.2rem;
+  background-color: transparent;
+  color: #161823;
+  padding: 4px 12px;
+  cursor: pointer;
+}
+.user-avatar {
+  width: 32px;
+  height: 32px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-left: 12px;
+  cursor: pointer;
+  
 }
