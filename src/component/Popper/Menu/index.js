@@ -31,8 +31,8 @@ function Menu({ children, items = [], onChange = () => {} }) {
           }}
         />
       );
-    });
-
+    }); 
+ 
   return (
     <Tippy
       interactive

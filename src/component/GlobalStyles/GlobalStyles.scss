@@ -1,6 +1,7 @@
 @import "normalize.css";
-@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700&display=swap");
 :root {
   --primary: #fe2c55;
   --back: #000000;
@@ -19,7 +20,10 @@
 }
 
 body {
-  font-family: "IBM Plex Sans", san s-serif;
+  // font-family: "IBM Plex Sans", sans-serif;
+  font-family: "Montserrat", sans-serif;
+  font-family: "Work Sans", sans-serif;
+  font-family: "Be Vietnam Pro", sans-serif; 
   font-size: 1.6rem;
   line-height: 1.5;
   text-rendering: optimizeSpeed;
