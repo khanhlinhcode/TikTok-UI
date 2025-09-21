@@ -1,5 +1,7 @@
 // public routes
 // import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import routes from "~/config/routes";
+
 import { HeaderOnly } from "~/component/Layout";
 import Home from "~/pages/Home";
 import Following from "~/pages/Following";
@@ -9,24 +11,24 @@ import Search from "~/pages/Search";
 
 const publicRoutes = [
   {
-    path: "/",
+    path: routes.home,
     component: Home,
   },
   {
-    path: "/following",
+    path: routes.following,
     component: Following,
   },
   {
-    path: "/:nickname",
+    path: routes.profile,
     component: Profile,
   },
   {
-    path: "/upload",
+    path: routes.upload,
     component: Upload,
     layout: HeaderOnly,
   },
   {
-    path: "/search",
+    path: routes.search,
     component: Search,
     layout: null,
   },

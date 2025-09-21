@@ -1,8 +1,13 @@
-import classnames from "classnames/bind";
-import style from "./Header.module.scss";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
 import "tippy.js/dist/tippy.css";
+import Tippy from "@tippyjs/react";
+import Search from "~/pages/Search";
+import routes from "~/config/routes";
+import Button from "~/component/Button";
+import style from "./Header.module.scss";
+import classnames from "classnames/bind";
+import { Link } from "react-router-dom";
+import Menu from "~/component/Popper/Menu";
+
 import {
   faEllipsisVertical,
   faEarthAsia,
@@ -14,11 +19,8 @@ import {
   faGear,
   faSignOut,
 } from "@fortawesome/free-solid-svg-icons";
-import Button from "~/component/Button";
-import Menu from "~/component/Popper/Menu";
-import Tippy from "@tippyjs/react";
-import "tippy.js/dist/tippy.css";
-import Search from "~/pages/Search";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 const cx = classnames.bind(style);
 const MENU_ITEMS = [
   {
@@ -87,11 +89,13 @@ function Header() {
       <div className={cx("inner")}>
         {/* logo */}
         <div className={cx("logo")}>
-          <img
-            src="https://i.ibb.co/J3Tqwy5/Tik-Tok-logo.png"
-            alt="Tiktok"
-            height="42"
-          />
+          <Link to={routes.home} className={cx("logo-link")}>
+            <img
+              src="https://i.ibb.co/J3Tqwy5/Tik-Tok-logo.png"
+              alt="Tiktok"
+              height="42"
+            />
+          </Link>
         </div>
         {/* search */}
         <Search />

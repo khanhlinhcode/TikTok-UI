@@ -8,7 +8,12 @@ import Header from "./Header";
 
 const cx = classNames.bind(style);
 
-function Menu({ children, items = [], onChange = () => {} }) {
+function Menu({
+  children,
+  items = [],
+  hideOnClick = false,
+  onChange = () => {},
+}) {
   // history: mảng các object { title, data }
   const [history, setHistory] = useState([{ title: null, data: items }]);
   const current = history[history.length - 1];
@@ -31,14 +36,15 @@ function Menu({ children, items = [], onChange = () => {} }) {
           }}
         />
       );
-    }); 
- 
+    });
+
   return (
     <Tippy
       interactive
       delay={[0, 700]}
       offset={[12, 8]}
-       placement="bottom-end"
+      hideOnClick={hideOnClick}
+      placement="bottom-end"
       onHide={() => setHistory((prev) => prev.slice(0, 1))} // reset khi đóng menu
       render={(attrs) => (
         <div className={cx("menu-list")} tabIndex="-1" {...attrs}>

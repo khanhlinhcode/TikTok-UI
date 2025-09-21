@@ -16,6 +16,9 @@
   align-items: center;
   justify-content: space-between;
 }
+.logo-link {
+  display: flex;
+}
 
 // action
 .actions {
@@ -48,5 +51,4 @@
   border-radius: 50%;
   margin-left: 12px;
   cursor: pointer;
-  
 }
