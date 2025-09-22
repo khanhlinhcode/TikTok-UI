@@ -91,7 +91,7 @@ function Header() {
         <div className={cx("logo")}>
           <Link to={routes.home} className={cx("logo-link")}>
             <img
-              src="https://i.ibb.co/J3Tqwy5/Tik-Tok-logo.png"
+              src="https://classic.vn/wp-content/uploads/2023/08/1200px-TikTok_logo.svg.png"
               alt="Tiktok"
               height="42"
             />
