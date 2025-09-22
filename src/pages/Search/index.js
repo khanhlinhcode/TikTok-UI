@@ -12,7 +12,7 @@ import { Wrapper as PopperWrapper } from "~/component/Popper";
 import AccountItem from "~/component/AccountItem";
 import { useEffect, useState, useRef } from "react";
 import { useDebounce } from "~/hook/useDebounce";
-import * as searchService from "~/apiServices/searchServices";
+import * as searchService from "~/services/searchService";
 
 const cx = classNames.bind(style);
 function Search() {
@@ -59,7 +59,7 @@ function Search() {
   };
 
   return (
-    // Tippy: nơi hiển thị
+    // Tippy: nơi hiển thị 
     <div>
       <HeadlessTippy
         interactive

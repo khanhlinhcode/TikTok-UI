@@ -1,7 +1,7 @@
 import "tippy.js/dist/tippy.css";
 import Tippy from "@tippyjs/react";
 import Search from "~/pages/Search";
-import routes from "~/config/routes";
+import config from "~/config";
 import Button from "~/component/Button";
 import style from "./Header.module.scss";
 import classnames from "classnames/bind";
@@ -89,7 +89,7 @@ function Header() {
       <div className={cx("inner")}>
         {/* logo */}
         <div className={cx("logo")}>
-          <Link to={routes.home} className={cx("logo-link")}>
+          <Link to={config.routes.home} className={cx("logo-link")}>
             <img
               src="https://classic.vn/wp-content/uploads/2023/08/1200px-TikTok_logo.svg.png"
               alt="Tiktok"
