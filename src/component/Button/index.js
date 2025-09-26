@@ -1,6 +1,7 @@
-import classNames from "classnames/bind";
+import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 import style from "./Button.module.scss";
+import classNames from "classnames/bind";
 
 const cx = classNames.bind(style);
 
@@ -62,5 +63,20 @@ function Button({
     </Comp>
   );
 }
-
+Button.propTypes = {
+  to: PropTypes.string,
+  href: PropTypes.string,
+  leftIcon: PropTypes.node,
+  rightIcon: PropTypes.node,
+  text: PropTypes.bool,
+  small: PropTypes.bool,
+  large: PropTypes.bool,
+  outline: PropTypes.bool,
+  children: PropTypes.node.isRequired,
+  disabled: PropTypes.bool,
+  primary: PropTypes.bool,
+  className: PropTypes.string,
+  rounded: PropTypes.bool,
+  onClick: PropTypes.func,
+};
 export default Button;

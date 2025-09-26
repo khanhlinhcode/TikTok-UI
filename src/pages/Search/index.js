@@ -37,7 +37,7 @@ function Search() {
     const fetchApi = async () => {
       setLoading(true);
       const result = await searchService.search(debounced);
-      setSearchResult(result);
+      setSearchResult(Array.isArray(result) ? result : []);
       setLoading(false);
     };
     fetchApi();
@@ -64,7 +64,7 @@ function Search() {
       <HeadlessTippy
         interactive
         appendTo={() => document.body}
-        visible={showResult && searchResult.length > 0}
+        visible={showResult && Array.isArray(searchResult) && searchResult.length > 0}
         render={(attrs) => (
           <div className={cx("search-result")} tabIndex="-1" {...attrs}>
             <PopperWrapper>

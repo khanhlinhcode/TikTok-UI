@@ -1,10 +1,11 @@
+import Header from "./Header";
 import { useState } from "react";
+import MenuItem from "./MenuItem";
+import PropTypes from "prop-types";
+import style from "./Menu.module.scss";
 import Tippy from "@tippyjs/react/headless";
 import classNames from "classnames/bind";
-import style from "./Menu.module.scss";
 import { Wrapper as PopperWrapper } from "~/component/Popper";
-import MenuItem from "./MenuItem";
-import Header from "./Header";
 
 const cx = classNames.bind(style);
 
@@ -67,4 +68,10 @@ function Menu({
   );
 }
 
+Menu.propTypes = {
+  children: PropTypes.node.isRequired,
+  items: PropTypes.array,
+  hideOnClick: PropTypes.bool,
+  onChange: PropTypes.func,
+};
 export default Menu;

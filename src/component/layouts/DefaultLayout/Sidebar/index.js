@@ -1,5 +1,7 @@
+import PropTypes from "prop-types";
 import style from "./Sidebar.module.scss";
 import classNames from "classnames/bind";
+import DefaultLayout from "..";
 
 const cx = classNames.bind(style);
 function Sidebar() {
@@ -9,5 +11,8 @@ function Sidebar() {
     </aside>
   );
 }
+DefaultLayout.propTypes = {
+  children: PropTypes.node.isRequired,
+};
 
 export default Sidebar;
