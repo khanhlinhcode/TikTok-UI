@@ -15,6 +15,7 @@ import { useDebounce } from "~/hook/useDebounce";
 import * as searchService from "~/services/searchService";
 
 const cx = classNames.bind(style);
+
 function Search() {
   const [searchValue, setSearchValue] = useState("");
   const [searchResult, setSearchResult] = useState([]);
@@ -59,12 +60,14 @@ function Search() {
   };
 
   return (
-    // Tippy: nơi hiển thị 
+    // Tippy: nơi hiển thị
     <div>
       <HeadlessTippy
         interactive
         appendTo={() => document.body}
-        visible={showResult && Array.isArray(searchResult) && searchResult.length > 0}
+        visible={
+          showResult && Array.isArray(searchResult) && searchResult.length > 0
+        }
         render={(attrs) => (
           <div className={cx("search-result")} tabIndex="-1" {...attrs}>
             <PopperWrapper>
