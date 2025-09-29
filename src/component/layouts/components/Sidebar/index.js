@@ -11,6 +11,7 @@ import {
   faUserFriends,
   faVideo,
 } from "@fortawesome/free-solid-svg-icons";
+import SuggestedAccounts from "../SuggestedAccounts";
 
 const cx = classNames.bind(style);
 
@@ -34,6 +35,8 @@ function Sidebar() {
           icon={<FontAwesomeIcon icon={faVideo} />}
         />
       </Menu>
+      <SuggestedAccounts label="Suggested accounts" />
+      {/* <SuggestedAccounts label="Fowllowing accounts" /> */}
     </aside>
   );
 }
